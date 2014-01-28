@@ -3,7 +3,9 @@
 
 print "Started"
 
-file = open('/home/penagwin/.config/sublime-text-3/Packages/User/Question.txt', 'r')
-for line in file:
-		if(line != "\n"):
-        	 print line
+
+answers = open('/home/penagwin/.config/sublime-text-3/Packages/User/Question.txt', 'r')
+questions = open('/home/penagwin/.config/sublime-text-3/Packages/User/Question', 'r')
+for question in questions:
+		if(question != "\n"):
+        	 print question
