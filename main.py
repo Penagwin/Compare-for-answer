@@ -11,3 +11,4 @@ for question in questions:
 		for answer in answers:
 				print answer.find(question)
 				print answer
+				print question
