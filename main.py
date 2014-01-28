@@ -9,6 +9,5 @@ questions = open('/home/penagwin/.config/sublime-text-3/Packages/User/Question',
 for question in questions:
 	if not question == "\n":
 		for answer in answers:
-				print answer.find(question)
+			if answer.find("Core Democratic Values") != -1:
 				print answer
-				print question
