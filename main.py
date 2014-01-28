@@ -9,5 +9,4 @@ questions = open('/home/penagwin/.config/sublime-text-3/Packages/User/Question',
 for question in questions:
 	if not question == "\n":
 		for answer in answers:
-			if answer.find(question) != -1:
-				print answer
+				print answer.find(question)
