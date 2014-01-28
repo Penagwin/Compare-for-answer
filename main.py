@@ -11,3 +11,5 @@ for question in questions:
 		currentquestion = question.strip(' \t\n\r')
 		if answer.find(currentquestion) != -1:
 			print answer
+answers.close()
+questions.close()
