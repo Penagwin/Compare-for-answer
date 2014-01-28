@@ -7,7 +7,7 @@ print "Started"
 answers = open('/home/penagwin/.config/sublime-text-3/Packages/User/Question.txt', 'r')
 questions = open('/home/penagwin/.config/sublime-text-3/Packages/User/Question', 'r')
 for question in questions:
-	print question
 	for answer in answers:
+		question = question.strip(' \t\n\r')
 		if answer.find(question) != -1:
 			print answer
