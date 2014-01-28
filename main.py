@@ -10,3 +10,4 @@ for question in questions:
 	if not question == "\n":
 		for answer in answers:
 				print answer.find(question)
+				print answer
