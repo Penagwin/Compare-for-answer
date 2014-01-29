@@ -6,13 +6,13 @@ print "Started"
 answeryet = False
 nextline = False
 pos = []
-found = False
 small = 0
 answerb = 0
 answers = open('/home/penagwin/.config/sublime-text-3/Packages/User/Question.txt', 'r')
 questions = open('/home/penagwin/.config/sublime-text-3/Packages/User/Answers.txt', 'r')
 for question in questions:
 	while True:
+		found = False
 		pos.append(answers.tell())
 		currentquestion = question.replace("\n", "")
 		answer = answers.readline()
@@ -42,7 +42,6 @@ for question in questions:
 			found = True
 	answers.seek(0)
 	answerb = 0
-	found = False
 	pos = []
 
 answers.close()
