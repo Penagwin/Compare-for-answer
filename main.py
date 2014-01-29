@@ -24,11 +24,10 @@ for question in questions:
 			true = False
 		if answer.find("Question") != -1:
 			answerb = 1 
-		if answer.find("Correct Answer:") != -1:
+		if answer.find("Answer") != -1:
 			answerb = 2
 		if answerb == 1:
 			if answer.find(currentquestion) != -1:
-				print answerb
 				print answer
 				while answer.lower().find("correct answer:") == -1:
 					 answer = answers.readline()
