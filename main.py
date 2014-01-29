@@ -37,7 +37,7 @@ for question in questions:
 				answers.seek(pos[len(pos)-small])
 				answer = answers.readline()
 				answers.seek(pos[len(pos)-small-1])
-			print beforean + "\n" +answers.readline()
+			print beforean + "\n" +answers.readline() +"\n\n\n"
 			answers.seek(pos[len(pos)-1])
 			
 			found = True
