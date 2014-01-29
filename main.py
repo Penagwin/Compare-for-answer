@@ -14,7 +14,7 @@ for question in questions:
 			answeryet = True
 		if answer.find("Correct Answer:") != -1:
 			nextline = True
-		if nextline:
+		if nextline == True:
 			print answer
 			nextline = False
 			answeryet = False
