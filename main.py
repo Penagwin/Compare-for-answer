@@ -25,11 +25,12 @@ for question in questions:
 		if answer.find(currentquestion) != -1 and answerb == 1:
 			print answer
 		if answer.find(currentquestion) != -1 and answerb == 2:
-			answers.seek(pos[len(pos)-1])
-			while answers.readline().lower().find("answer") != -1:
+			while answer.lower().find("answer") == -1:
 				small = small +1
 				print " "+str(len(pos)-small)+ "        " + str(len(pos)) + '                '+ answers.readline()
 				answers.seek(pos[len(pos)-small])
+				answer = answers.readline()
+
 			print "ummm" +answers.readline()
 			answers.seek(pos[len(pos)-1])
 			small=0
