@@ -11,10 +11,10 @@ answerb = 0
 answers = open('/home/penagwin/.config/sublime-text-3/Packages/User/Question.txt', 'r')
 questions = open('/home/penagwin/.config/sublime-text-3/Packages/User/Answers.txt', 'r')
 for question in questions:
+	global found 
 	found = False
 	while True:
-		global found
-		
+
 		pos.append(answers.tell())
 		currentquestion = question.replace("\n", "")
 		answer = answers.readline()
