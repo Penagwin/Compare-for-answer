@@ -13,6 +13,7 @@ questions = open('/home/penagwin/.config/sublime-text-3/Packages/User/Answers.tx
 for question in questions:
 	found = False
 	true = True
+	print question
 	while true == True:
 
 		pos.append(answers.tell())
