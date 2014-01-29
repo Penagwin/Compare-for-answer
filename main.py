@@ -12,15 +12,16 @@ answers = open('/home/penagwin/.config/sublime-text-3/Packages/User/Question.txt
 questions = open('/home/penagwin/.config/sublime-text-3/Packages/User/Answers.txt', 'r')
 for question in questions:
 	found = False
-	while True:
+	true = True
+	while true == True:
 
 		pos.append(answers.tell())
 		currentquestion = question.replace("\n", "")
 		answer = answers.readline()
 		if answer == "END OF FILE":
-			break
+			true = False
 		if found == True:
-			break
+			true = False
 		if answer.find("Question") != -1:
 			answerb = 1 
 		elif answer.find("Correct Answer:") != -1:
@@ -31,13 +32,13 @@ for question in questions:
 			found =True
 
 		if answer.find(currentquestion) != -1 and answerb == 2:
-			beforean = answer
+			print answer
 			while answer.lower().find("answer") == -1 or answer.lower().find("answer:") != -1:
 				small = small +1
 				answers.seek(pos[len(pos)-small])
 				answer = answers.readline()
 				answers.seek(pos[len(pos)-small-1])
-			print beforean + "\n" +answers.readline() +"\n\n\n"
+			print answers.readline() +"\n\n\n"
 			answers.seek(pos[len(pos)-1])
 			
 			found = True
