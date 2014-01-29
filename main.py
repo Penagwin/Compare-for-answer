@@ -13,9 +13,7 @@ questions = open('/home/penagwin/.config/sublime-text-3/Packages/User/Answers.tx
 for question in questions:
 	found = False
 	true = True
-	print question
 	while true == True:
-
 		pos.append(answers.tell())
 		currentquestion = question.replace("\n", "")
 		answer = answers.readline()
@@ -28,7 +26,7 @@ for question in questions:
 		elif answer.find("Correct Answer:") != -1:
 			answerb = 2
 		
-		if answer.find(currentquestion) != -1 and answerb == 0:
+		if answer.find(currentquestion) != -1 and answerb == 1:
 			print answer
 			found =True
 
