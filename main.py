@@ -5,7 +5,7 @@ print "Started"
 
 
 answers = open('/home/penagwin/.config/sublime-text-3/Packages/User/Question.txt', 'r')
-questions = open('/home/penagwin/.config/sublime-text-3/Packages/User/Question', 'r')
+questions = open('/home/penagwin/.config/sublime-text-3/Packages/User/Answers.txt', 'r')
 for question in questions:
 	print question
 	for answer in answers:
