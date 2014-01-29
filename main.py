@@ -44,6 +44,7 @@ for question in questions:
 	answers.seek(0)
 	answerb = 0
 	found = False
+	pos = []
 
 answers.close()
 questions.close()
