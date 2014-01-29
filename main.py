@@ -12,7 +12,7 @@ for question in questions:
 		currentquestion = question.replace("\n", "")
 		if answer.find(currentquestion) != -1:
 			answeryet = True
-		if nextline == True:
+		if nextline == True and answer != "\n":
 			print answer
 			nextline = False
 			answeryet = False
