@@ -25,18 +25,7 @@ for question in questions:
 			answerb = 1 
 		if answer.find("Correct Answer:") != -1:
 			answerb = 2
-		if answerb == 2:
-			if answer.find(currentquestion) != -1:
-				print answer
-				while answer.lower().find("answer") == -1 or answer.lower().find("answer:") != -1:
-					small = small +1
-					answers.seek(pos[len(pos)-small])
-					answer = answers.readline()
-					answers.seek(pos[len(pos)-small-1])
-				print answers.readline() +"\n\n\n"
-				answers.seek(pos[len(pos)-1])
-				
-				found = True
+		
 		if answerb == 1:
 			if answer.find(currentquestion) != -1:
 				print answer
@@ -46,7 +35,18 @@ for question in questions:
 				print answers.readline()
 				found =True
 
-		
+		if answerb == 2:
+			if answer.find(currentquestion) != -1:
+				print answer
+				while answer.lower().find("answer") == -1 or answer.lower().find("answer:") != -1:
+					small = small +1
+					answers.seek(pos[len(pos)-small])
+					answer = answers.readline()
+					answers.seek(pos[len(pos)-small-1])
+				print answers.readline() +"\n\n\nasdfasdfasdf"
+				answers.seek(pos[len(pos)-1])
+				
+				found = True
 	answers.seek(0)
 	answerb = 0
 	pos = []
