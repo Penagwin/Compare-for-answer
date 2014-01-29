@@ -32,7 +32,6 @@ for question in questions:
 		if answer.find(currentquestion) != -1 and answerb == 2:
 			while answer.lower().find("answer") == -1 or answer.lower().find("answer:") != -1:
 				small = small +1
-				#print " "+str(len(pos)-small)+ "        " + str(len(pos)) + '                '+ answers.readline()
 				answers.seek(pos[len(pos)-small])
 				answer = answers.readline()
 				answers.seek(pos[len(pos)-small-1])
