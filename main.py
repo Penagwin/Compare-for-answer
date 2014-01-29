@@ -13,6 +13,8 @@ questions = open('/home/penagwin/.config/sublime-text-3/Packages/User/Answers.tx
 for question in questions:
 	found = False
 	while True:
+		global found
+		
 		pos.append(answers.tell())
 		currentquestion = question.replace("\n", "")
 		answer = answers.readline()
