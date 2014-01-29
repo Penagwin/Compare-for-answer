@@ -8,7 +8,7 @@ answers = open('/home/penagwin/.config/sublime-text-3/Packages/User/Question.txt
 questions = open('/home/penagwin/.config/sublime-text-3/Packages/User/Question', 'r')
 for question in questions:
 	for answer in answers:
-		currentquestion = "".join(question.split())
+		currentquestion = question.replace("\n", "")
 		if answer.find(currentquestion) != -1:
 			print answer
 answers.close()
