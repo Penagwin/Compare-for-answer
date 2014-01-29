@@ -2,13 +2,7 @@
 
 
 print "Started"
-global found 
-global answeryet
-global nextline
-global pos
-global small
-global answerb
-
+global found
 answeryet = False
 nextline = False
 pos = []
@@ -44,8 +38,7 @@ for question in questions:
 				answers.seek(pos[len(pos)-small-1])
 			print answers.readline()
 			answers.seek(pos[len(pos)-1])
-			small=0
-			answerb = 0
+			
 			found = True
 	answers.seek(0)
 	answerb = 0
