@@ -25,7 +25,7 @@ for question in questions:
 		if answer.find(currentquestion) != -1 and answerb == 1:
 			print answer
 			answer = answers.readline()
-			while answer == "/n":
+			while answer.replace("\n", "") == "":
 				answer = answers.readline()
 
 		if answer.find(currentquestion) != -1 and answerb == 2:
