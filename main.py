@@ -35,7 +35,7 @@ for question in questions:
 				print answers.readline()
 				found =True
 
-		if answer.find(currentquestion) != -1 and answerb == 2:
+		if answerb == 2:
 			if answer.find(currentquestion) != -1:
 				print answer
 				while answer.lower().find("answer") == -1 or answer.lower().find("answer:") != -1:
