@@ -16,7 +16,7 @@ for question in questions:
 	true = True
 	while true == True:
 		pos.append(answers.tell())
-		currentquestion = question.replace("\n", "")
+		currentquestion = question.lower().replace("\n", "")
 		answer = answers.readline()
 		if answer == "END OF FILE":
 			true = False
@@ -27,7 +27,7 @@ for question in questions:
 		if answer.find("Answer") != -1:
 			answerb = 2
 		if answerb == 1:
-			if answer.find(currentquestion) != -1:
+			if answer.lower().find(currentquestion) != -1:
 				print answer
 				while answer.lower().find("correct answer:") == -1:
 					 answer = answers.readline()
@@ -36,7 +36,7 @@ for question in questions:
 				found =True
 
 		if answerb == 2:
-			if answer.find(currentquestion) != -1:
+			if answer.lower().find(currentquestion) != -1:
 				print answer
 				while answer.lower().find("answer") == -1 or answer.lower().find("answer:") != -1:
 					small = small +1
