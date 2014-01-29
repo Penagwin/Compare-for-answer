@@ -20,8 +20,6 @@ for question in questions:
 		answer = answers.readline()
 		if answer == "END OF FILE":
 			true = False
-		if found == True:
-			true = False
 		if answer.find("Question") != -1:
 			answerb = 1 
 		if answer.find("Answer") != -1:
@@ -33,7 +31,7 @@ for question in questions:
 					 answer = answers.readline()
 				answers.readline()
 				print answers.readline()+"\n\n\n"
-				found =True
+				true = False
 
 		if answerb == 2:
 			if answer.lower().find(currentquestion) != -1:
@@ -44,9 +42,8 @@ for question in questions:
 					answer = answers.readline()
 					answers.seek(pos[len(pos)-small-1])
 				print answers.readline() +"\n\n\n"
-				answers.seek(pos[len(pos)-1])
-				
-				found = True
+				answers.seek(pos[len(pos)-1])	
+				true = False
 	answers.seek(0)
 	answerb = 0
 	pos = []
