@@ -30,7 +30,7 @@ for question in questions:
 			if answer.find(currentquestion) != -1:
 				print answerb
 				print answer
-				while answer.lower().find("answer:") == -1:
+				while answer.lower().find("correct answer:") == -1:
 					 answer = answers.readline()
 				answers.readline()
 				print answers.readline()
