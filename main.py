@@ -27,7 +27,7 @@ for question in questions:
 				small = small +1
 				answers.seek(pos[len(pos)-1])
 			answers.seek(pos[len(pos)-small-1])
-			print answers
+			print answer
 			answers.seek(pos[len(pos)-1])
 			small=0
 			answerb = False
