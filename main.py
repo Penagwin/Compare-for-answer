@@ -22,7 +22,7 @@ for question in questions:
 		if answer.find(currentquestion) != -1 and answerb == 1:
 			print answer
 		if answer.find(currentquestion) != -1 and answerb == 2:
-			answers.seek(pos[len(pos)-1])
+			answers.seek(pos[len(pos)-2])
 			while answer.find("Answer") != -1 and answer.find("Answer:") == -1:
 				small = small +1
 				answers.seek(pos[len(pos)-1])
