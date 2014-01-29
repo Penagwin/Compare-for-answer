@@ -50,4 +50,5 @@ for question in questions:
 	pos = []
 
 answers.close()
+final.close()
 questions.close()
