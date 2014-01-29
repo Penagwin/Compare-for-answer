@@ -13,7 +13,8 @@ for question in questions:
 		if answer.find(currentquestion) != -1:
 			answeryet = True
 		if nextline == True and answer != "\n":
-			print answer
+			print question
+			print answer + "\n \n"
 			nextline = False
 			answeryet = False
 		if answer.find("Correct Answer:") != -1:
