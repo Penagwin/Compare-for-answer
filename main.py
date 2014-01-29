@@ -28,7 +28,11 @@ for question in questions:
 		
 		if answer.find(currentquestion) != -1 and answerb == 1:
 			print answer
+			while answer.lower().find("answer:") == -1:
+				 answer = answers.readline()
+			answers.readline()
 			print answers.readline()
+
 			found =True
 
 		if answer.find(currentquestion) != -1 and answerb == 2:
