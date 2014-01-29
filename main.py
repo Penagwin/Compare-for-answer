@@ -30,7 +30,7 @@ for question in questions:
 				small = small +1
 				print " "+str(len(pos)-small)+ "        " + str(len(pos)) + '                '+ answers.readline()
 				answers.seek(pos[len(pos)-small])
-			print answers.readline()
+			print "ummm" +answers.readline()
 			answers.seek(pos[len(pos)-1])
 			small=0
 			answerb = 0
