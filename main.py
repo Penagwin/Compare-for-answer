@@ -27,8 +27,8 @@ for question in questions:
 		if answer.find("Correct Answer:") != -1:
 			answerb = 2
 		if answerb == 1:
-			print answerb
 			if answer.find(currentquestion) != -1:
+				print answerb
 				print answer
 				while answer.lower().find("answer:") == -1:
 					 answer = answers.readline()
