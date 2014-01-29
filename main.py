@@ -6,6 +6,7 @@ print "Started"
 answeryet = False
 nextline = False
 pos = []
+found = False
 small = 0
 answerb = 0
 answers = open('/home/penagwin/.config/sublime-text-3/Packages/User/Question.txt', 'r')
@@ -17,6 +18,8 @@ for question in questions:
 		answer = answers.readline()
 		if answer == "END OF FILE":
 			break
+		if found == True:
+			break
 		if answer.find("Question") != -1:
 			answerb = 1 
 		elif answer.find("Correct Answer:") != -1:
@@ -24,6 +27,7 @@ for question in questions:
 		
 		if answer.find(currentquestion) != -1 and answerb == 0:
 			print answer
+			found =True
 
 		if answer.find(currentquestion) != -1 and answerb == 2:
 			while answer.lower().find("answer") == -1 or answer.lower().find("answer:") != -1:
@@ -36,8 +40,10 @@ for question in questions:
 			answers.seek(pos[len(pos)-1])
 			small=0
 			answerb = 0
+			found = True
 	answers.seek(0)
 	answerb = 0
+	found = False
 
 answers.close()
 questions.close()
