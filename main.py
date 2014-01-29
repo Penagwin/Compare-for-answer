@@ -31,13 +31,12 @@ for question in questions:
 			found =True
 
 		if answer.find(currentquestion) != -1 and answerb == 2:
-			print answer
 			while answer.lower().find("answer") == -1 or answer.lower().find("answer:") != -1:
 				small = small +1
 				answers.seek(pos[len(pos)-small])
 				answer = answers.readline()
 				answers.seek(pos[len(pos)-small-1])
-			print answers.readline()
+			print answer + "\n" +answers.readline()
 			answers.seek(pos[len(pos)-1])
 			
 			found = True
