@@ -23,7 +23,7 @@ for question in questions:
 			true = False
 		if answer.find("Question") != -1:
 			answerb = 1 
-		elif answer.find("Correct Answer:") != -1:
+		if answer.find("Correct Answer:") != -1:
 			answerb = 2
 		
 		if answer.find(currentquestion) != -1 and answerb == 1:
@@ -44,7 +44,6 @@ for question in questions:
 					answers.seek(pos[len(pos)-small-1])
 				print answers.readline() +"\n\n\n"
 				answers.seek(pos[len(pos)-1])
-				
 				found = True
 	answers.seek(0)
 	answerb = 0
