@@ -32,7 +32,7 @@ for question in questions:
 				while answer.lower().find("correct answer:") == -1:
 					 answer = answers.readline()
 				answers.readline()
-				print answers.readline()
+				print answers.readline()+"\n\n\n"
 				found =True
 
 		if answerb == 2:
