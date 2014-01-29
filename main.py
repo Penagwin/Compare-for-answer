@@ -18,6 +18,7 @@ for question in questions:
 			answerb = True
 		if answer.find("Question") != -1:
 			answerb = False 
+			nextline = True
 		if answer.find(currentquestion) != -1:
 			answeryet = True
 		if answer.find(currentquestion) != -1 and answer == True:
