@@ -26,20 +26,26 @@ for question in questions:
 		elif answer.find("Correct Answer:") != -1:
 			answerb = 2
 		
-		#if answer.find(currentquestion) != -1 and answerb == 1:
-			
+		if answer.find(currentquestion) != -1 and answerb == 1:
+			print answer
+			while answer.lower().find("answer:") == -1:
+				 answer = answers.readline()
+			answers.readline()
+			print answers.readline()
+			found =True
 
 		if answer.find(currentquestion) != -1 and answerb == 2:
-			print answer
-			while answer.lower().find("answer") == -1 or answer.lower().find("answer:") != -1:
-				small = small +1
-				answers.seek(pos[len(pos)-small])
-				answer = answers.readline()
-				answers.seek(pos[len(pos)-small-1])
-			print answers.readline() +"\n\n\n"
-			answers.seek(pos[len(pos)-1])
-			
-			found = True
+			if found == False:
+				print answer
+				while answer.lower().find("answer") == -1 or answer.lower().find("answer:") != -1:
+					small = small +1
+					answers.seek(pos[len(pos)-small])
+					answer = answers.readline()
+					answers.seek(pos[len(pos)-small-1])
+				print answers.readline() +"\n\n\n"
+				answers.seek(pos[len(pos)-1])
+				
+				found = True
 	answers.seek(0)
 	answerb = 0
 	pos = []
