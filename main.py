@@ -31,6 +31,7 @@ for question in questions:
 			found =True
 
 		if answer.find(currentquestion) != -1 and answerb == 2:
+			print answerb
 			while answer.lower().find("answer") == -1 or answer.lower().find("answer:") != -1:
 				small = small +1
 				answers.seek(pos[len(pos)-small])
