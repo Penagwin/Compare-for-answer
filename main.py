@@ -30,7 +30,7 @@ for question in questions:
 			print answer
 			answers.seek(pos[len(pos)-1])
 			small=0
-			answerb = False
+			answerb = 0
 	answers.seek(0)
 	answerb = 0
 
