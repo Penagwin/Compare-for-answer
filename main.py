@@ -22,7 +22,7 @@ for question in questions:
 		elif answer.find("Correct Answer:") != -1:
 			answerb = 2
 		
-		if answer.find(currentquestion) != -1 and answerb != 2:
+		if answer.find(currentquestion) != -1 and answerb == 0:
 			print answer
 
 		if answer.find(currentquestion) != -1 and answerb == 2:
