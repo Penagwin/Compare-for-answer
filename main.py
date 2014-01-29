@@ -12,5 +12,6 @@ for question in questions:
 		currentquestion = question.replace("\n", "")
 		if answer.find(currentquestion) != -1:
 			print answer
+	answers.seek(0)
 answers.close()
 questions.close()
