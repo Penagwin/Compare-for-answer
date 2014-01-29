@@ -16,8 +16,13 @@ for question in questions:
 			nextline = True
 		if nextline:
 			print answer
+			nextline = False
+			answeryet = False
+
+
 	answers.seek(0)
-	answeryet = False
 	nextline = False
+	answeryet = False
+
 answers.close()
 questions.close()
