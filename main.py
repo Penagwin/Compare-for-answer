@@ -26,8 +26,8 @@ for question in questions:
 			answerb = 1 
 		if answer.find("Correct Answer:") != -1:
 			answerb = 2
-		print answerb
 		if answerb == 1:
+			print answerb
 			if answer.find(currentquestion) != -1:
 				print answer
 				while answer.lower().find("answer:") == -1:
