@@ -12,12 +12,13 @@ for question in questions:
 		currentquestion = question.replace("\n", "")
 		if answer.find(currentquestion) != -1:
 			answeryet = True
-		if answer.find("Correct Answer:") != -1:
-			nextline = True
 		if nextline == True:
 			print answer
 			nextline = False
 			answeryet = False
+		if answer.find("Correct Answer:") != -1:
+			nextline = True
+		
 
 
 	answers.seek(0)
