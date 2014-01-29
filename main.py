@@ -25,16 +25,6 @@ for question in questions:
 			answerb = 1 
 		if answer.find("Correct Answer:") != -1:
 			answerb = 2
-		
-		if answerb == 1:
-			if answer.find(currentquestion) != -1:
-				print answer
-				while answer.lower().find("answer:") == -1:
-					 answer = answers.readline()
-				answers.readline()
-				print answers.readline()
-				found =True
-
 		if answerb == 2:
 			if answer.find(currentquestion) != -1:
 				print answer
@@ -47,6 +37,16 @@ for question in questions:
 				answers.seek(pos[len(pos)-1])
 				
 				found = True
+		if answerb == 1:
+			if answer.find(currentquestion) != -1:
+				print answer
+				while answer.lower().find("answer:") == -1:
+					 answer = answers.readline()
+				answers.readline()
+				print answers.readline()
+				found =True
+
+		
 	answers.seek(0)
 	answerb = 0
 	pos = []
