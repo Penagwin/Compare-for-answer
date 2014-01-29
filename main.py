@@ -7,6 +7,7 @@ answeryet = False
 nextline = False
 pos = []
 small = 0
+global answerb
 answerb = 0
 answers = open('/home/penagwin/.config/sublime-text-3/Packages/User/Question.txt', 'r')
 questions = open('/home/penagwin/.config/sublime-text-3/Packages/User/Answers.txt', 'r')
@@ -43,7 +44,7 @@ for question in questions:
 					answers.seek(pos[len(pos)-small])
 					answer = answers.readline()
 					answers.seek(pos[len(pos)-small-1])
-				print answers.readline() +"\n\n\nasdfasdfasdf"
+				print answers.readline() +"\n\n\n"
 				answers.seek(pos[len(pos)-1])
 				
 				found = True
