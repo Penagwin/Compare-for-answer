@@ -9,6 +9,7 @@ pos = []
 small = 0
 global answerb
 answerb = 0
+final = open('/home/penagwin/final.txt', 'w')
 answers = open('/home/penagwin/.config/sublime-text-3/Packages/User/Question.txt', 'r')
 questions = open('/home/penagwin/.config/sublime-text-3/Packages/User/Answers.txt', 'r')
 for question in questions:
@@ -26,22 +27,22 @@ for question in questions:
 			answerb = 2
 		if answerb == 1:
 			if answer.lower().find(currentquestion) != -1:
-				print answer
+				final.write(answer)
 				while answer.lower().find("correct answer:") == -1:
 					 answer = answers.readline()
 				answers.readline()
-				print answers.readline()+"\n\n\n"
+				final.write(answers.readline()+"\n\n\n")
 				true = False
 
 		if answerb == 2:
 			if answer.lower().find(currentquestion) != -1:
-				print answer
+				final.write(answer)
 				while answer.lower().find("answer") == -1 or answer.lower().find("answer:") != -1:
 					small = small +1
 					answers.seek(pos[len(pos)-small])
 					answer = answers.readline()
 					answers.seek(pos[len(pos)-small-1])
-				print answers.readline() +"\n\n\n"
+				final.write(answers.readline() +"\n\n\n")
 				answers.seek(pos[len(pos)-1])	
 				true = False
 	answers.seek(0)
